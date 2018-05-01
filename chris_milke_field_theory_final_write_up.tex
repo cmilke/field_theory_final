@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{slashed}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 
 \begin{document}
 
@@ -23,17 +24,34 @@
         $  \bar{\Psi} \gamma^\mu \Psi A_\mu(x) $, which cancels the non-gauge-invariant part of the derivative. The new term with $A_\mu(x)$ can then be lumped in with the derivative term, to create a so-called ``Covariant'' derivative,
         $ D_\mu \equiv \partial_\mu - i e A_\mu $
 
+
 \section{The ``Vector'' Fermion Field}
-        We begin our discussion of the gauge field with a look at the fermion field $\Psi(x)$. We can, naively, define the fermion field as: 
+        We begin our discussion of the gauge field with a look at the fermion field $\Psi(x)$. We can, naively (i.e. ignoring gauge symmetry), define the fermion field as: 
         $\Psi \equiv R(x) \cdot \mathbf{S}$
 
         Here, $R(x)$ is the amplitude of the field at a given space-time point, and $\mathbf{S}$ is the spin-one-half 4-vector of the field.
-        In this sense, the fermion field is technically a vector, but only in the context of its four-component spin vector. The spin vector however, does not change with time or space, and so is effectively a label. It becomes relevant only during interactions with the spin components of other fields.
+        In this sense, the fermion field is technically a vector, but only in the context of its four-component spin vector. The spin vector however, does not change with time or space, and so is effectively a label. It becomes relevant only during interactions with the spin components of other fields. The only component which varies with space-time then is the scalar amplitude $R$. In this sense, the fermion field is effectively a scalar field. This is a naive picture of the fermion field though, so to gain a better understanding we must introduce the local U(1) group.
+        
+        We introduced local U(1) transformations earlier in the introduction, but this time around we will not be introducing U(1) as a mere symmetry demand. Instead, we introduce local phase as a geometric space our fermion must traverse in the same manner as coordinate space-time. First let us define an accurate depiction of the fermion field:
+        $\Psi \equiv R(x) \cdot \mathbf{S} \cdot e^{i \phi(x)}$
 
+        The obvious difference now is of course the coordinate-dependent complex phase. This is only one way to view the phase however. In pursuit of a more geometrically sound interpretation, we can expand the complex exponential into a real and imaginary component. Furthermore, the real and and imaginary components can be imagined not as complex components, but rather as components of an internal two-dimensional vector space. Labelling the two internal dimensions as $\alpha_1$ and $\alpha_2$, the fermion field takes the form:
+        $\Psi = \mathbf{S} \cdot R(x) \left[ \alpha_1(x) \hat\alpha_1 + \alpha_2(x) \hat\alpha_2 \right]$ 
+
+        The fermion field now acts like a true vector field, with $\alpha_1$ and $\alpha_2$ providing the components of direction of the vector, and $R$ providing the magnitude. As such, we can finally take a sensible look at the covariant derivative, in the context of parallel transport.
 
 
 \section{Parallel Transport}
-        TODO
+        Conceptually, parallel transport is just another way of taking vector derivatives. In general relativity, this kind of differentiation is of crucial importance, and is mathematically very challenging. Here though, with our internal two-dimensional space, parallel transport is fairly simple. Typically, vector calculus involves performing derivatives on each component of the vector seperately. As one moves across the vector space, the components of the vector change independently of each other, and so the derivatives (be it a divergence, curl, or otherwise) track the rate of change of the components independent of one another. Parallel transport takes a slightly different approach. In parallel transport, the idea is that not only is the vector changing, but so is the \textit{geometry} which the vector traverses. In this case, it is not enough to only look at the changes in the vector components, because a change in the vector component from one point in the geometry to the next is the sum of two seperate changes: the true change of the vector, and the change of the geometry itself. A covarient derivative then, is a derivative meant to seperate these changes, and present only the true change of the vector, correcting for the changes in geometry.
+
+        With the description of covariant derivatives out of the way, we turn to the trivial case of the covariant derivative of our fermion vector field. Seeking to replicate the method of parallel transport we seperate the fermion vector into true changes and geometric changes. I claim it as trivial because, in our formulation of QED, we find that the only part of the fermion vector which is not a result of geometric changes is the amplitude. All of the vector components of $\Psi$ we then attribute purely to changes in the internal $U(1)$ geometry. An appropriate covariant derivative will then exclusively compare changes in the magnitude of the fermion field, and exclude all changes in the phase. As the fermion field is merely a product of the amplitude and phase, the covarient derivative then amounts to nothing more than canceling out part of the product rule:
+
+
+
+
+
+
+    
 
 \section{Field Strength Tensor from Wilson Loop}
         TODO
