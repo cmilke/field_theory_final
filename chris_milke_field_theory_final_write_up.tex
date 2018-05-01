@@ -12,17 +12,19 @@
 \maketitle
 
 \section{Introduction}
-        We define the pure fermion field as the spin-half solutions to the Dirac Equation, and construct our lagrangian density as:
+        The effort of this brief paper will be to derive the QED lagrangian (and to a lesser degree a general $SU(N)$) from a geometric perspective. We start, as usual, by defining the pure fermion field as the spin-one-half solutions to the Dirac Equation, and construct our lagrangian density as:
 
         $ \mathcal{L} =  i \bar{\Psi} \slashed\partial_\mu \Psi - m \bar{\Psi} \Psi   $
 
         From here, the usual next step is to demand invariance of the Lagrangian under local $U(1)$ (Gauge) tranformations. $U(1)$ gauge tranformations take the form: 
 
-        $ \Psi(x) \rightarrow e^{-i \alpha(x)} \Psi(x) $ and $ \bar\Psi(x) \rightarrow e^{+i \alpha(x)} \bar\Psi(x) $
+        $ \Psi(x) \rightarrow e^{-i \theta(x)} \Psi(x) $ and $ \bar\Psi(x) \rightarrow e^{+i \alpha(x)} \bar\Psi(x) $
 
         As the partial derivative of $\Psi$ does not transform this way in the lagrangian density, we introduce a new term into the lagrangian, 
         $  \bar{\Psi} \gamma^\mu \Psi A_\mu(x) $, which cancels the non-gauge-invariant part of the derivative. The new term with $A_\mu(x)$ can then be lumped in with the derivative term, to create a so-called ``Covariant'' derivative,
         $ D_\mu \equiv \partial_\mu - i e A_\mu $
+
+        This is where I wish to diverge a bit. Instead of constructing the gauge field on the premise of gauge invariance, I will construct it on the basis of parallel transporting the fermion field through an internal $U(1)$ space.
 
 
 \section{The ``Vector'' Fermion Field}
@@ -59,12 +61,14 @@
         as $A_\mu \equiv \frac{1}{e} \partial_\mu \phi(x)$ restoring the original form of the covariant derivative
         $ D_\mu \equiv \partial_\mu - i e A_\mu $.
 
-
-\section{Extension to SU(N)}
-        
-
-\section{Field Strength Tensor from Wilson Loop}
-        TODO
+        \clearpage
+        \section{Sources}
+                \begin{itemize}
+                        \item \underline{Quantum Field Theory}; \textit{Lewis H. Ryder}; 1985
+                        \item \underline{Introduction to Quantum Field Theory}; \textit{Michael E. Peskin, Daniel V. Schroeder}; 1951
+                        \item \underline{Quantum Field Theory}; \textit{Mark Srednecki}; 2007
+                        \item \underline{Relativity, Gravitation and Cosmology 2E}; \textit{Ta-Pei Cheng}; 2010
+                \end{itemize}
 
 
 \end{document}

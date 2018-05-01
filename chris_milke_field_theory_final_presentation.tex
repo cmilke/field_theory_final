@@ -1,0 +1,121 @@
+\documentclass[12pt]{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{slashed}
+
+\begin{document}
+
+\title{The Geometry of the Yang-Mill's Field}
+\author{Christopher Milke}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Outline}
+        \begin{itemize}
+                \item Quick look at gauge invariance \vfill
+                \item A look at parallel transport \vfill
+                \item Parellel transporting the fermion field \vfill
+        \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Gauge Invariant Approach}
+        Local $U(1)$ gauge tranformations: 
+        \vfill
+
+        $ \Psi(x) \rightarrow e^{-i \theta(x)} \Psi(x) $ and $ \bar\Psi(x) \rightarrow e^{+i \alpha(x)} \bar\Psi(x) $
+        \vfill
+
+        Base Fermion Lagrangian:
+        $ \mathcal{L} =  i \bar{\Psi} \slashed\partial_\mu \Psi - m \bar{\Psi} \Psi   $
+        \vfill
+
+        Demand local $U(1)$ (Gauge) invariance: 
+        $ D_\mu \equiv \partial_\mu - i e A_\mu $
+        \vfill
+\end{frame}
+
+\begin{frame}
+\frametitle{A Geometric Approach}
+        Interpret Covarient Derivative as method for parallel transport
+        
+        \begin{center}
+        \includegraphics[scale=.4]{Parallel_Transport}
+        \end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{An Explicit Definition of $\Psi(x)$}
+        $\Psi(x) \equiv \mathbf{S} \cdot R(x) \cdot e^{i \phi(x)}$ \vfill
+
+        $\mathbf{S}$: spin-one-half 4-vector of the field \vfill
+
+        $R(x)$: amplitude of field \vfill
+        
+        $e^{i \phi(x)}$: phase factor \vfill
+\end{frame}
+
+\begin{frame}
+\frametitle{The Fermion Field as a Vector}
+        Parallel Transport requires a vector, so
+
+        Expand complex phase as two real vectors:
+        \vfill
+
+        $\Psi(x) = \mathbf{S} \cdot R(x) \cdot
+        \begin{bmatrix} \alpha_1\\ \alpha_2 \end{bmatrix} $ 
+\end{frame}
+
+\begin{frame}
+\frametitle{Geometric vs True Change}
+        All Changes in Phase are geometric
+        \vfill
+        Only changes in amplitude are true changes to the ``vector''
+\end{frame}
+
+\begin{frame}
+\frametitle{Parallel Transport of Fermion Field}
+        Start with $ D_\mu \equiv \partial_\mu + \Gamma_\mu $
+
+        Demand
+        $D_\mu \Psi(x) = \mathbf{S} \cdot [\partial_\mu R(x) ] \cdot e^{i\phi(x)} $
+
+        Then: \vfill
+        
+        $ (\partial_\mu + \Gamma_\mu) [  \mathbf{S} \cdot R(x) \cdot e^{i\phi(x)} ]
+                = \mathbf{S} \cdot (\partial_\mu R(x) ) \cdot e^{i\phi(x)} + 
+                \mathbf{S} \cdot  R(x)  \cdot (\partial_\mu e^{i\phi(x)}) +
+                \mathbf{S} \cdot  R(x)  \cdot e^{i\phi(x)} \Gamma_\mu $
+
+        \vfill
+        Implies that $\Gamma_\mu = - i \partial_\mu \phi(x) $. 
+        \vfill
+        
+        Inserting a factor of $e$, we return to the original gauge field,
+
+        $A_\mu \equiv \frac{1}{e} \partial_\mu \phi(x)$ 
+        
+        \vfill
+        $\therefore D_\mu \equiv \partial_\mu - i e A_\mu $.
+\end{frame}
+
+\begin{frame}
+\frametitle{Deriving (sort of) the Gauge Field Tensor}
+        Parallel transport around a box
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Sources}
+        \begin{itemize}
+                \item \underline{Quantum Field Theory}; \textit{Lewis H. Ryder}; 1985 \vfill
+                \item \underline{Introduction to Quantum Field Theory}; \textit{Michael E. Peskin, Daniel V. Schroeder}; 1951 \vfill
+                \item \underline{Quantum Field Theory}; \textit{Mark Srednecki}; 2007 \vfill
+                \item \underline{Relativity, Gravitation and Cosmology 2E}; \textit{Ta-Pei Cheng}; 2010 \vfill
+        \end{itemize}
+\end{frame}
+
+\end{document}
