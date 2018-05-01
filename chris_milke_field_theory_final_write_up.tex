@@ -45,13 +45,23 @@
         Conceptually, parallel transport is just another way of taking vector derivatives. In general relativity, this kind of differentiation is of crucial importance, and is mathematically very challenging. Here though, with our internal two-dimensional space, parallel transport is fairly simple. Typically, vector calculus involves performing derivatives on each component of the vector seperately. As one moves across the vector space, the components of the vector change independently of each other, and so the derivatives (be it a divergence, curl, or otherwise) track the rate of change of the components independent of one another. Parallel transport takes a slightly different approach. In parallel transport, the idea is that not only is the vector changing, but so is the \textit{geometry} which the vector traverses. In this case, it is not enough to only look at the changes in the vector components, because a change in the vector component from one point in the geometry to the next is the sum of two seperate changes: the true change of the vector, and the change of the geometry itself. A covarient derivative then, is a derivative meant to seperate these changes, and present only the true change of the vector, correcting for the changes in geometry.
 
         With the description of covariant derivatives out of the way, we turn to the trivial case of the covariant derivative of our fermion vector field. Seeking to replicate the method of parallel transport we seperate the fermion vector into true changes and geometric changes. I claim it as trivial because, in our formulation of QED, we find that the only part of the fermion vector which is not a result of geometric changes is the amplitude. All of the vector components of $\Psi$ we then attribute purely to changes in the internal $U(1)$ geometry. An appropriate covariant derivative will then exclusively compare changes in the magnitude of the fermion field, and exclude all changes in the phase. As the fermion field is merely a product of the amplitude and phase, the covarient derivative then amounts to nothing more than canceling out part of the product rule:
+        We define the covariant derivative as $ D_\mu \equiv \partial_\mu + \Gamma_\mu $, with $\Gamma_\mu$ being the connection coefficient,
+        and demand that the covariant derivative of $ \Psi(x) $ take the derivative of only the magnitude $R$,
+        $D_\mu \Psi(x) = \mathbf{S} \cdot [\partial_\mu R(x) ] \cdot e^{i\phi(x)} $ . Then
+        
+        $ (\partial_\mu + \Gamma_\mu) [  \mathbf{S} \cdot R(x) \cdot e^{i\phi(x)} ] $ 
+        $ = \mathbf{S} \cdot (\partial_\mu R(x) ) \cdot e^{i\phi(x)} +
+           \mathbf{S} \cdot  R(x)  \cdot (\partial_\mu e^{i\phi(x)}) +
+           \mathbf{S} \cdot  R(x)  \cdot e^{i\phi(x)} \Gamma_\mu $
+
+        The unwanted term, the partial of the phase factor, is the only term that needs to be cancelled by the $\Gamma_\mu$. Thus the connection coefficient term here is simply $ - \mathbf{S} \cdot  R(x)  \cdot (\partial_\mu e^{i\phi(x)})  $, which means 
+        $\Gamma_\mu = - i \partial_\mu \phi(x) $. Pulling out a factor of $e$, we can relate the connection coefficient to the gauge field
+        as $A_\mu \equiv \frac{1}{e} \partial_\mu \phi(x)$ restoring the original form of the covariant derivative
+        $ D_\mu \equiv \partial_\mu - i e A_\mu $.
 
 
-
-
-
-
-    
+\section{Extension to SU(N)}
+        
 
 \section{Field Strength Tensor from Wilson Loop}
         TODO
