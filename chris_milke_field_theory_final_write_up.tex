@@ -61,6 +61,23 @@
         as $A_\mu \equiv \frac{1}{e} \partial_\mu \phi(x)$ restoring the original form of the covariant derivative
         $ D_\mu \equiv \partial_\mu - i e A_\mu $.
 
+
+\section{Field Tensor}
+        With our covarient derivative in hand, we can now construct the electromagnetic field tensor. To do this, we will translate a fermion field in a closed loop, with four successive, orthogonal, infinitesimal translations in two dimesions. Mathematically, this means operating on a fermion field with four seperate translation operators:
+        $ \Psi'(x) = T_{DA} T_{CD} T_{BC} T_{AB} \Psi(x) $
+        
+        A translation over some displacement vector $\Delta x^\mu$ can of course be represented using the generator of translations, $ e^{-i \Delta x^\mu \hat p_\mu}$. Over an infinitesimal displacement, we can expand this exponential out to first order in the displacement, $ T \approx 1 -i \Delta x^\mu \hat p_\mu $, and then our translated field is:
+
+
+        $ \Psi'(x) = (1 + i \Delta x^\nu \hat p_\nu)(1 + i \Delta x^\mu \hat p_\mu)(1 - i \Delta x^\nu \hat p_\nu)(1 + i \Delta x^\mu \hat p_\mu) \Psi(x) $
+
+
+
+        
+
+
+
+
         \clearpage
         \section{Sources}
                 \begin{itemize}
